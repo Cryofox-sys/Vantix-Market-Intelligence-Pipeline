@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VANTIX STUDIO // Intelligence & Creative Architecture</title>
     <style>
-        /* MINIMALIST UNDERGROUND DESIGN SYSTEM */
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +13,7 @@
         }
 
         body {
-            background-color: #0a0a0a;
+            background-color: #060606;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
@@ -26,10 +25,9 @@
             padding: 0 2rem;
         }
 
-        /* HEADER & NAVIGATION */
         header {
-            padding: 3rem 0;
-            border-bottom: 1px solid #1a1a1a;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid #111;
         }
 
         nav {
@@ -40,27 +38,27 @@
 
         .logo {
             font-weight: 800;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             letter-spacing: -0.05em;
             text-transform: uppercase;
         }
 
         .status-tag {
-            background-color: #1a1a1a;
+            background-color: #0f1c14;
             padding: 0.4rem 0.8rem;
             border-radius: 4px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #00ff66;
-            border: 1px solid #2a2a2a;
+            border: 1px solid #1b3824;
+            font-weight: 600;
         }
 
-        /* HERO SECTION */
         .hero {
-            padding: 8rem 0;
+            padding: 6rem 0 4rem 0;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.8rem;
             font-weight: 800;
             letter-spacing: -0.06em;
             line-height: 1.1;
@@ -69,88 +67,136 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #888888;
+            font-size: 1.1rem;
+            color: #777;
             max-width: 600px;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
-        /* PORTFOLIO GRID SHOWCASE */
-        .showcase {
-            padding: 4rem 0 8rem 0;
+        /* INTERACTIVE TERMINAL CONSOLE */
+        .console-box {
+            background-color: #0c0c0c;
+            border: 1px solid #1c1c1c;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 6rem;
+            font-family: 'Courier New', Courier, monospace;
         }
 
+        .console-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1c1c1c;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .console-dots {
+            display: flex;
+            gap: 5px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #222;
+        }
+
+        .dot.green { background-color: #00ff66; }
+
+        .console-title {
+            font-size: 0.75rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .console-body {
+            height: 180px;
+            overflow-y: auto;
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .console-log {
+            margin-bottom: 0.4rem;
+        }
+
+        .console-log.success { color: #00ff66; }
+        .console-log.trigger { color: #ffffff; font-weight: bold; }
+
+        .console-btn {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .console-btn:hover { opacity: 0.9; }
+
+        /* SHOWCASE GRID */
+        .showcase { padding-bottom: 6rem; }
         .section-title {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            color: #444444;
-            margin-bottom: 3rem;
+            color: #333;
+            margin-bottom: 2.5rem;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .card {
-            background-color: #111111;
-            border: 1px solid #1a1a1a;
+            background-color: #0c0c0c;
+            border: 1px solid #151515;
             padding: 2.5rem;
-            border-radius: 8px;
+            border-radius: 6px;
             transition: all 0.3s ease;
         }
 
         .card:hover {
-            border-color: #ffffff;
-            transform: translateY(-5px);
+            border-color: #333;
         }
 
         .card-tag {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            color: #888888;
+            color: #555;
             letter-spacing: 0.1em;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: -0.03em;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .card p {
-            color: #777777;
-            font-size: 0.95rem;
+            color: #666;
+            font-size: 0.9rem;
             margin-bottom: 1.5rem;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        /* FOOTER */
         footer {
             padding: 4rem 0;
-            border-top: 1px solid #1a1a1a;
+            border-top: 1px solid #111;
             text-align: center;
-            color: #444444;
-            font-size: 0.85rem;
+            color: #333;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -160,47 +206,94 @@
         <div class="container">
             <nav>
                 <div class="logo">VANTIX STUDIO</div>
-                <div class="status-tag">// ACTIVE DEPLOYMENT PIPELINES</div>
+                <div class="status-tag">INTELLIGENCE NODE ONLINE</div>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
+    <main class="container">
+        <section class="hero">
             <h1>We design hyper-automated digital systems & visual architectures.</h1>
             <p>Engineered at the intersection of technical software development and high-leverage brand identity design for international operations.</p>
-            <a href="mailto:your-email@domain.com" class="btn">Initiate Briefing</a>
-        </div>
-    </section>
+        </section>
 
-    <section class="showcase">
-        <div class="container">
-            <h2 class="section-title">ACTIVE PORTFOLIO DEPLOYMENTS</h2>
+        <section class="console-box">
+            <div class="console-header">
+                <div class="console-dots">
+                    <div class="dot green"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="console-title">Telemetry Environment // Pipeline Simulation</div>
+            </div>
+            <div class="console-body" id="consoleBody">
+                <div class="console-log">[SYSTEM INFO] Ready for telemetry simulation sequence...</div>
+            </div>
+            <button class="console-btn" id="runSimBtn" onclick="runSimulation()">Execute Telemetry Test</button>
+        </section>
+
+        <section class="showcase">
+            <h2 class="section-title">Active Portfolio Deployments</h2>
             <div class="grid">
-                
                 <div class="card">
                     <div class="card-tag">Backend Integration / AI Automation</div>
                     <h3>Autonomous Market Intelligence Telemetry Pipeline</h3>
                     <p>An automated operational pipeline querying live market REST APIs, logging tabular time-series data to local databases, and routing real-time financial analyst briefs via webhook payloads.</p>
-                    <span style="color: #00ff66; font-size: 0.85rem; font-weight: 600;">Status: Operational</span>
+                    <span style="color: #00ff66; font-size: 0.8rem; font-weight: 600;">Status: Operational</span>
                 </div>
 
                 <div class="card">
                     <div class="card-tag">Creative Direction / Video Architecture</div>
                     <h3>High-Retention Vertical Asset Generation</h3>
-                    <p>Designing fast-paced, high-impact vertical short-form media files utilizing high-contrast typographic layouts, synchronized kinetic caption tracking, and aggressive transitions to capture consumer attention.</p>
-                    <span style="color: #888888; font-size: 0.85rem;">Status: Available for Retainer</span>
+                    <p>Designing fast-paced, high-impact vertical short-form media files utilizing high-contrast typographic layouts, synchronized kinetic caption tracking, and aggressive transitions.</p>
+                    <span style="color: #666; font-size: 0.8rem;">Status: Active Development</span>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 VANTIX STUDIO. ALL ASSETS CLASSIFIED. DESTINATION: 2035.</p>
+            <p>&copy; 2026 VANTIX STUDIO. ALL ASSETS CLASSIFIED.</p>
         </div>
     </footer>
 
+    <script>
+        function runSimulation() {
+            const btn = document.getElementById('runSimBtn');
+            const box = document.getElementById('consoleBody');
+            
+            btn.disabled = true;
+            btn.innerText = "Running Telemetry...";
+            box.innerHTML = `<div class="console-log trigger">&gt; python main.py --simulate</div>`;
+            
+            const logs = [
+                { text: "🛰️ INITIALIZING VANTIX MARKET INTELLIGENCE SYSTEM...", class: "" },
+                { text: "🔍 Querying Coingecko REST API endpoint for asset pairs...", class: "" },
+                { text: "✅ SUCCESS: BTC, ETH, and SOL spot values captured.", class: "success" },
+                { text: "📊 Requesting equity close margins via yfinance vectors...", class: "" },
+                { text: "📝 SUCCESS: Database commit finalized inside 'market_history.csv'", class: "success" },
+                { text: "🧠 STREAMING METRICS TO GEMINI PRO PROCESSING LAYER...", class: "" },
+                { text: "✨ AI REPORT GENERATED: 'Markets showing strong resistance at psychological levels; structural liquidity remains sound.'", class: "success" },
+                { text: "📡 DISPATCHING DISCORD WEBHOOK PAYLOAD INTERCEPT...", class: "" },
+                { text: "🚀 PIPELINE CYCLE COMPLETE: Telemetry successfully sent.", class: "success" }
+            ];
+
+            logs.forEach((log, index) => {
+                setTimeout(() => {
+                    const logLine = document.createElement('div');
+                    logLine.className = `console-log ${log.class}`;
+                    logLine.innerText = log.text;
+                    box.appendChild(logLine);
+                    box.scrollTop = box.scrollHeight;
+                    
+                    if (index === logs.length - 1) {
+                        btn.disabled = false;
+                        btn.innerText = "Execute Telemetry Test";
+                    }
+                }, (index + 1) * 700);
+            });
+        }
+    </script>
 </body>
 </html>
